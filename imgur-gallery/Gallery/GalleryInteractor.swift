@@ -22,5 +22,10 @@ final class GalleryInteractor: GalleryBusinessLogic {
         presenter: GalleryPresentationLogic
     ) {
         self.presenter = presenter
+
+        let service = NetworkService()
+        service.request(networkRequest: ImgurRequest.getImagesInformation) { (result: Result<ImgurEntity, NetworkError>) in
+            
+        }
     }
 }
