@@ -14,8 +14,12 @@ extension UIView {
         leading: (NSLayoutXAxisAnchor, constant: CGFloat)? = nil,
         trailing: (NSLayoutXAxisAnchor, constant: CGFloat)? = nil,
         centerY: (NSLayoutYAxisAnchor, constant: CGFloat)? = nil,
-        centerX: (NSLayoutXAxisAnchor, constant: CGFloat)? = nil
+        centerX: (NSLayoutXAxisAnchor, constant: CGFloat)? = nil,
+        widthConstant: CGFloat? = nil,
+        heighConstant: CGFloat? = nil
     ) {
+        translatesAutoresizingMaskIntoConstraints = false
+        
         if let top = top {
             self.topAnchor.constraint(equalTo: top.0, constant: top.constant).isActive = true
         }
@@ -29,7 +33,7 @@ extension UIView {
         }
         
         if let trailing = trailing {
-            self.trailingAnchor.constraint(equalTo: trailing.0, constant: trailing.constant).isActive = true
+            self.trailingAnchor.constraint(equalTo: trailing.0, constant: -trailing.constant).isActive = true
         }
         
         if let centerY = centerY {
@@ -39,5 +43,23 @@ extension UIView {
         if let centerX = centerX {
             self.centerXAnchor.constraint(equalTo: centerX.0, constant: centerX.constant).isActive = true
         }
+        
+        if let heighConstant = heighConstant {
+            self.heightAnchor.constraint(equalToConstant: heighConstant).isActive = true
+        }
+
+        if let widthConstant = widthConstant {
+            self.widthAnchor.constraint(equalToConstant: widthConstant).isActive = true
+        }
+    }
+    
+    func fillSuperview() {
+        guard let superview = superview else { return }
+        self.anchor(
+            top: (superview.topAnchor, 0),
+            bottom: (superview.bottomAnchor, 0),
+            leading: (superview.leadingAnchor, 0),
+            trailing: (superview.trailingAnchor, 0)
+        )
     }
 }

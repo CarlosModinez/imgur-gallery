@@ -8,10 +8,10 @@
 import Foundation
 
 protocol GalleryBusinessLogic {
-    
+    func onViewDidLoad()
 }
 
-final class GalleryInteractor: GalleryBusinessLogic {
+final class GalleryInteractor {
     // MARK: - Dependencies
 
     private let presenter: GalleryPresentationLogic
@@ -22,5 +22,11 @@ final class GalleryInteractor: GalleryBusinessLogic {
         presenter: GalleryPresentationLogic
     ) {
         self.presenter = presenter
+    }
+}
+
+extension GalleryInteractor: GalleryBusinessLogic {
+    func onViewDidLoad() {
+        presenter.presentData()
     }
 }
