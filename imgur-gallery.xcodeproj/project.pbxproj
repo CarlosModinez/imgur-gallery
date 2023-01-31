@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D169095B2983660A00F8B1B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D169095A2983660A00F8B1B4 /* AppDelegate.swift */; };
 		D169095D2983660A00F8B1B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D169095C2983660A00F8B1B4 /* SceneDelegate.swift */; };
-		D169095F2983660A00F8B1B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D169095E2983660A00F8B1B4 /* ViewController.swift */; };
 		D16909642983660B00F8B1B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D16909632983660B00F8B1B4 /* Assets.xcassets */; };
 		D16909672983660B00F8B1B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D16909652983660B00F8B1B4 /* LaunchScreen.storyboard */; };
 		D16909722983660B00F8B1B4 /* imgur_galleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16909712983660B00F8B1B4 /* imgur_galleryTests.swift */; };
@@ -47,7 +46,6 @@
 		D16909572983660A00F8B1B4 /* imgur-gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "imgur-gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D169095A2983660A00F8B1B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D169095C2983660A00F8B1B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D169095E2983660A00F8B1B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D16909632983660B00F8B1B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D16909662983660B00F8B1B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D16909682983660B00F8B1B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,15 +113,14 @@
 		D16909592983660A00F8B1B4 /* imgur-gallery */ = {
 			isa = PBXGroup;
 			children = (
-				D169099F2983956C00F8B1B4 /* Service */,
-				D16909932983697F00F8B1B4 /* Extension+helpers */,
-				D169098A2983670700F8B1B4 /* Gallery */,
+				D16909682983660B00F8B1B4 /* Info.plist */,
 				D169095A2983660A00F8B1B4 /* AppDelegate.swift */,
 				D169095C2983660A00F8B1B4 /* SceneDelegate.swift */,
-				D169095E2983660A00F8B1B4 /* ViewController.swift */,
 				D16909632983660B00F8B1B4 /* Assets.xcassets */,
 				D16909652983660B00F8B1B4 /* LaunchScreen.storyboard */,
-				D16909682983660B00F8B1B4 /* Info.plist */,
+				D16909932983697F00F8B1B4 /* Extension+helpers */,
+				D169098A2983670700F8B1B4 /* Gallery */,
+				D169099F2983956C00F8B1B4 /* Service */,
 			);
 			path = "imgur-gallery";
 			sourceTree = "<group>";
@@ -324,7 +321,6 @@
 				D16909952983699000F8B1B4 /* UIView.swift in Sources */,
 				D169099729836BC000F8B1B4 /* CodedView.swift in Sources */,
 				D16909922983673F00F8B1B4 /* GalleryPresenter.swift in Sources */,
-				D169095F2983660A00F8B1B4 /* ViewController.swift in Sources */,
 				D16909A32983962100F8B1B4 /* ImgurEntity.swift in Sources */,
 				D169095B2983660A00F8B1B4 /* AppDelegate.swift in Sources */,
 				D169098E2983672200F8B1B4 /* GalleryViewController.swift in Sources */,
