@@ -8,10 +8,10 @@
 import Foundation
 
 protocol GalleryBusinessLogic {
-    
+    func onViewDidLoad()
 }
 
-final class GalleryInteractor: GalleryBusinessLogic {
+final class GalleryInteractor {
     // MARK: - Dependencies
 
     private let presenter: GalleryPresentationLogic
@@ -27,5 +27,11 @@ final class GalleryInteractor: GalleryBusinessLogic {
         service.request(networkRequest: ImgurRequest.getImagesInformation) { (result: Result<ImgurEntity, NetworkError>) in
             
         }
+    }
+}
+
+extension GalleryInteractor: GalleryBusinessLogic {
+    func onViewDidLoad() {
+        presenter.presentData()
     }
 }
